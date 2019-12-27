@@ -277,7 +277,7 @@ body {
 
 .illustration {
     position: relative;
-    height: 30.2rem;
+    height: 31.2rem;
     width: 100%;
     backface-visibility: hidden;
 
@@ -412,6 +412,14 @@ body {
             border-radius: 4px;
             text-transform: capitalize;
         }
+
+        &:hover {
+            transform: translateY(-.8rem);
+        }
+    
+        &:active {
+            transform: translateY(-.3rem);
+        }
     }
 
     &-animate {
@@ -422,17 +430,11 @@ body {
         }
     }
 
-    &:hover {
-        transform: translateY(-.8rem);
-    }
-
-    &:active {
-        transform: translateY(-.3rem);
-    }
+  
 }
 
 //responsif phone
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 
     .section {
         height: 100vh;
@@ -624,6 +626,11 @@ body {
 //responsif tablet
 
 @media (min-width : 768px) and (max-width :992px) {
+    .section{
+        &-header{
+            height: 93vh;
+        }
+    }
     .nav {
         height: 7vh;
 
