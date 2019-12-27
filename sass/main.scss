@@ -235,7 +235,7 @@ body {
     &-input,
     &-button,
     &-bar {
-        width: 0;
+        height: 0;
         position: absolute;
         top: 0;
         right: 3.1rem;
@@ -450,10 +450,29 @@ body {
         align-items: flex-start;
 
         .nav-list {
-            display: none;
+            position: absolute;
+            top: 0rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            opacity: 0;
+            background-color: transparent;
+            transition: all .5s;
+            
         }
 
-        &-item {}
+        &-item {
+            z-index: -1;
+            display: inline-block;
+            position: absolute;
+            top: -50rem;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem 1rem;
+            text-align: center;
+            width: 100%;
+            
+        }
 
         &-input {
             display: inline;
@@ -467,7 +486,7 @@ body {
                 &>.nav-button {
                     position: absolute;
                     top: 2.3rem;
-                    right: 1rem;
+                    right: 0rem;
 
                     & .nav-bar-1 {
                         transform: rotate(45deg);
@@ -496,6 +515,7 @@ body {
                     left: 50%;
                     transform: translateX(-50%);
                     width: 100%;
+                    opacity: 1;
                     backface-visibility: hidden;
                     background-color: $color-secondary-black;
 
@@ -505,7 +525,10 @@ body {
                         padding: 1rem 1rem;
                         text-align: center;
                         width: 100%;
-
+                        position: relative;
+                        top: initial;
+                        left: 50%;
+                        transform: translateX(-50%);
                     }
 
                     &:last-child {
@@ -676,7 +699,8 @@ body {
                 }
                 & > .nav-list{
                     & > .nav-item{
-                        border: 4px $color-secondary-black solid;
+                        // border: 4px $color-secondary-black solid;
+                        padding: 1rem 0;
                     }
                 }
             }
