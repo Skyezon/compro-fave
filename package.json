@@ -1,0 +1,14 @@
+{
+  "name": "compro-fave",
+  "version": "1.0.0",
+  "description": "Company profile fave",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "FAVE",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
